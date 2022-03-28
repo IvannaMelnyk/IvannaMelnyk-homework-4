@@ -33,18 +33,3 @@ function onEscKeyPress(event) {
     onCloseModal();
   }
 }
-
-document.querySelector(".submit").addEventListener("click", () => {
-  let name = document.querySelector(".name-input").value;
-  let phone = document.querySelector(".phone-input").value;
-  let re = /^\d{10}$/;
-  let k = phone.match(re);
-
-  if (name != 0 && k != null) {
-    document.querySelector(".output").innerHTML =
-      "Person : " + name + "<br> Phone number : " + phone;
-  } else {
-    alert("message");
-    return false;
-  }
-});
