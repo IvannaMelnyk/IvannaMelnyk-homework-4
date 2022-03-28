@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="shortcut icon" href="#" />
+  </head>
+  <body>
+    <h1>Kyiv is my city</h1>
+    <div class="flex-wrapper">
+      <div class="slider-wrapper">
+        <div class="slide active">
+          <img src="images/picture1.jpg" alt="First slide" />
+        </div>
+        <div class="slide">
+          <img src="images/picture2.jpg" alt="Second slide" />
+        </div>
+        <div class="slide">
+          <img src="images/picture3.jpg" alt="Third slide" />
+        </div>
+        <div class="slide">
+          <img src="images/picture4.jpg" alt="Fourth slide" />
+        </div>
+        <div class="slide">
+          <img src="images/picture5.jpg" alt="Fifth slide" />
+        </div>
+        <div id="btn-prev"></div>
+        <div id="btn-next"></div>
+      </div>
+    </div>
+    <div class="dots-wrapper">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <button class="button" data-action="open-modal">Show form</button>
+
+    <div class="backdrop js-backdrop">
+      <div class="modal">
+        <h2>Profile</h2>
+
+        <div role="group">
+          <div class="out"></div>
+          <label>
+            Name
+            <input type="text" class="name-input" placeholder=" Name " />
+          </label>
+          <label>
+            Phone
+            <input
+              type="tel"
+              class="phone-input"
+              name="phone"
+              placeholder="+380..."
+              required
+              autocomplete="tel"
+            />
+          </label>
+        </div>
+        <br />
+        <button type="submit" class="submit">Save</button>
+        <button type="button" class="button" data-action="close-modal">
+          Close
+        </button>
+        <!-- <button class="js-clear">Очистить</button>
+        <p class="output js-output"></p> -->
+      </div>
+    </div>
+    <script src="js/03-slider.js"></script>
+    <script src="./js/04-modal.js" type="module"></script>
+  </body>
+</html>
