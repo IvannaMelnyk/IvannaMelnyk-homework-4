@@ -25,13 +25,7 @@ function phoneValidation(phone) {
   else phoneResult = true;
   for (let i = 0; i < phone.length; i++) {
     if (phone[i] < "0" || phone[i] > "9") {
-      if (
-        phone[i] != "+" &&
-        phone[i] != "(" &&
-        phone[i] != ")" &&
-        phone[i] != " "
-      )
-        phoneResult = false;
+      if (phone[i] != "+" && phone[i] != " ") phoneResult = false;
     }
   }
 }
@@ -47,11 +41,11 @@ saveButton.addEventListener("click", function () {
   if (inputName.value.length == 0) alert("Add input name");
   else console.log(inputName.value);
   nameValidation();
-  // console.log(result);
+  console.log(result);
   phoneValidation(inputPhone.value);
   if (phoneResult == false)
-    alert("use only 0..9, +, (, ) in the phone number without another symbols");
-  // console.log(phoneResult);
+    alert("use only 0..9, + in the phone number without another symbols");
+  console.log(phoneResult);
   if (phoneResult == true && result == true) {
     console.log("Name: ", inputName.value);
     console.log("Phone: ", inputPhone.value);
