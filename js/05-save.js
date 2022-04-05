@@ -37,19 +37,20 @@ function phoneValidation(phone) {
 }
 
 function inputValid() {
-  if (result == true) input__name.classList = "name-input valid";
-  else input__name.className = "name-input invalid";
-  if (phoneResult == true) input__phone.classList = "phone-input valid";
-  else input__phone.className = "phone-input invalid";
+  if (result == true) inputName.classList = "name-input valid";
+  else inputName.className = "name-input invalid";
+  if (phoneResult == true) inputPhone.classList = "phone-input valid";
+  else inputPhone.className = "phone-input invalid";
 }
 
 saveButton.addEventListener("click", function () {
-  if (inputName.value.length == 0) alert("Input name");
+  if (inputName.value.length == 0) alert("Add input name");
   else console.log(inputName.value);
   nameValidation();
   // console.log(result);
   phoneValidation(inputPhone.value);
-  if (phoneResult == false) alert("use only 0..9, +, (, ) in the phone number");
+  if (phoneResult == false)
+    alert("use only 0..9, +, (, ) in the phone number without another symbols");
   // console.log(phoneResult);
   if (phoneResult == true && result == true) {
     console.log("Name: ", inputName.value);
