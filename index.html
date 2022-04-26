@@ -31,6 +31,7 @@
         <div id="btn-prev"></div>
         <div id="btn-next"></div>
       </div>
+      <button class="button" data-action="open-modal">Show form</button>
     </div>
     <div class="dots-wrapper">
       <span class="dot active"></span>
@@ -40,18 +41,20 @@
       <span class="dot"></span>
     </div>
 
-    <button class="button" data-action="open-modal">Show form</button>
+    
 
     <div class="backdrop js-backdrop">
       <div class="modal">
         <h2>Profile</h2>
 
         <div role="group">
-          <div class="js-form"></div>
+          <div class="js-form">
           <label>
             Name
             <input
+            id="textInput"
               type="text"
+              name = "name"
               class="name-input"
               placeholder=" Name "
               required
@@ -60,6 +63,7 @@
           <label>
             Phone
             <input
+            id="pnoneInput"
               type="tel"
               class="phone-input"
               name="phone"
@@ -75,9 +79,8 @@
         <button type="button" class="button" data-action="close-modal">
           Close
         </button>
-        <button class="js-clear">Очистить</button>
-        <p class="output js-output"></p>
-      </div>
+        <button id="reset" class="button">Reset</button>
+        </div>
     </div>
     <script src="js/03-slider.js"></script>
     <script src="./js/04-modal.js" type="module"></script>

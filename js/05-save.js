@@ -9,16 +9,6 @@ function nameValidation() {
   else result = true;
 }
 
-//проста валідація
-function phoneValidation2(phone) {
-  if (phone.length == 0) phoneResult = false;
-  else phoneResult = true;
-  for (let i = 0; i < phone.length; i++) {
-    if (phone[i] < "0") phoneResult = false;
-    if (phone[i] > "9") phoneResult = false;
-  }
-}
-
 //бонус
 function phoneValidation(phone) {
   if (phone.length == 0) phoneResult = false;
@@ -41,14 +31,19 @@ saveButton.addEventListener("click", function () {
   if (inputName.value.length == 0) alert("Add input name");
   else console.log(inputName.value);
   nameValidation();
-  console.log(result);
   phoneValidation(inputPhone.value);
   if (phoneResult == false)
     alert("use only 0..9, + in the phone number without another symbols");
-  console.log(phoneResult);
   if (phoneResult == true && result == true) {
-    console.log("Name: ", inputName.value);
-    console.log("Phone: ", inputPhone.value);
+    let item = {
+      name: inputName.value,
+      phone: inputPhone.value,
+    };
+    localStorage.setItem("item", JSON.stringify(item));
+    alert("Name: " + inputName.value + "  Phone: " + inputPhone.value);
+    localStorage.setItem("phone", inputPhone.value);
+    localStorage.setItem("name", inputName.value);
   }
   inputValid();
 });
+

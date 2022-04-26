@@ -81,7 +81,7 @@ span:last-child {
   margin-right: 0;
 }
 input:invalid {
-  border: 2px dashed red;
+  border: 2px dashed pink;
 }
 
 input:invalid:required {
@@ -89,5 +89,40 @@ input:invalid:required {
 }
 
 input:valid {
-  border: 2px solid black;
+  border: 2px solid #000000;
+}
+table {
+  border: 2px solid #555;
+  border-collapse: collapse;
+  font: 16px "Montserat", "Arial", sans-serif;
+  text-align: center;
+}
+tr {
+  height: 40px;
+  align-items: center;
+}
+td,
+th {
+  width: 50%;
+  /* border: 1px solid #000000; */
+  text-align: left;
+  padding-left: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.button:hover,
+.submit:hover {
+  background-color: gray;
+  color: white;
+}
+.localName {
+  font-weight: bold;
+}
+.storage {
+  display: flex;
+  align-items: center;
 }

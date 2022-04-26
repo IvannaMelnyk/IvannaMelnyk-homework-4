@@ -33,3 +33,7 @@ function onEscKeyPress(event) {
     onCloseModal();
   }
 }
+document.getElementById("reset").onclick = function (e) {
+  document.getElementById("textInput").value = "";
+  document.getElementById("pnoneInput").value = "";
+};
